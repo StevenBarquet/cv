@@ -1,17 +1,18 @@
 // ---Dependencys
 import React from 'react';
 import { CaretRightOutlined } from '@ant-design/icons';
+// ---Redux
+import { useSelector } from 'react-redux';
+import { ReduxState } from 'Reducers';
 // ---CommonComps
 import Link from 'CComps/Link';
-// ---Others
-import { englishData, englishLabels } from 'Others/globalData';
 
 // ------------AUX COMPS
-function AmazingBytton() {
+function AmazingBytton({ startButton }: {startButton: string}) {
   return (
-    <Link to="/MainPage">
+    <Link to="/MainCVPage">
       <button className="glow-on-hover" type="button">
-        {englishLabels.startButton}
+        {startButton}
         <CaretRightOutlined />
       </button>
     </Link>
@@ -19,10 +20,12 @@ function AmazingBytton() {
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function Start(): React.ReactElement {
+  // ---Redux States
+  const { data, labels } = useSelector((reducers: ReduxState) => reducers.languageReducer);
   return (
     <div className="start-container">
-      <h1>{englishData.jobWanted}</h1>
-      <AmazingBytton />
+      <h1>{data.jobWanted}</h1>
+      <AmazingBytton startButton={labels.startButton} />
     </div>
   );
 }

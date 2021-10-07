@@ -1,7 +1,8 @@
 // ---Dependencys
 import { ReactElement } from 'react';
 import Head from 'next/head';
-// ---Components
+// ---Containers
+import MainCV from 'Cont/MainCV';
 
 export default function HomePage(): ReactElement {
   return (
@@ -9,7 +10,7 @@ export default function HomePage(): ReactElement {
       <Head>
         <title>CV | Main</title>
       </Head>
-      empty
+      <MainCV />
     </>
   );
 }

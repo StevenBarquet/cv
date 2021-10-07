@@ -6,12 +6,10 @@ import React from 'react';
 // ---Components
 // import AuthValidate from 'Comp/Master/AuthValidate';
 // ------------------------------------------ COMPONENT-----------------------------------------
-function SimpleComp () : React.ReactElement {
+export default function SimpleComp() : React.ReactElement {
   return (
     <>
       <span>Ejemplo Simple</span>
     </>
   );
 }
-
-export default SimpleComp;

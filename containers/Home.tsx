@@ -7,8 +7,8 @@ import { ReduxState } from 'Reducers';
 // ---Components
 import Name from 'Comp/Home/Name';
 import Start from 'Comp/Home/Start';
-// ---Others
-import { ownerData } from 'Others/global-config';
+// ---CommonComps
+import LangButton from 'CComps/LangButton';
 
 // ----------------------------------------COMPONENT----------------------------------------
 export default function Home(): ReactElement {
@@ -39,6 +39,7 @@ export default function Home(): ReactElement {
           </Col>
         </Row>
       </section>
+      <LangButton />
     </div>
   );
 }

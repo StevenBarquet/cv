@@ -3,11 +3,13 @@ import React, { useState, ReactElement } from 'react';
 import { MenuFoldOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
 import Link from 'CComps/Link';
 import { Row, Col } from 'antd';
+// ---Redux
+import { useSelector } from 'react-redux';
+import { ReduxState } from 'Reducers';
 // ---Components
 import NavButton from 'Comp/NavBar/NavbarItems/NavButton';
 // ---Others
-// import { appConfig } from 'Others/global-config';
-// style={{ backgroundColor: 'greenyellow' }}
+import { general } from 'Others/globalData';
 
 // -------------------------------------AUX COMPONENTS--------------------------------
 function JustButtons(props: { currentPath: string }) {
@@ -28,25 +30,27 @@ function JustButtons(props: { currentPath: string }) {
     xl: { offset: 4, span: 4 },
     xxl: { offset: 4, span: 4 }
   };
+  // ---Redux States
+  const { labels } = useSelector((reducers: ReduxState) => reducers.languageReducer);
   return (
     <Row>
-      <NavButton path="/" currentPath={currentPath} grid={navGrid}>
-        Inicio
+      <NavButton path={`/MainCVPage#${general.sectionIds.intro}`} currentPath={currentPath} grid={navGrid}>
+        {labels.menu.intro}
       </NavButton>
-      <NavButton path="/ProductsPage" currentPath={currentPath} grid={navGrid}>
-        Productos
+      <NavButton path={`/MainCVPage#${general.sectionIds.stack}`} currentPath={currentPath} grid={navGrid}>
+        {labels.menu.stack}
       </NavButton>
-      <NavButton path="/ServicesPage" currentPath={currentPath} grid={navGrid}>
-        Servicios
+      <NavButton path={`/MainCVPage#${general.sectionIds.exp}`} currentPath={currentPath} grid={navGrid}>
+        {labels.menu.experience}
       </NavButton>
-      <NavButton path="/LoginPage" currentPath={currentPath} grid={logInGrid}>
+      <NavButton path={`/MainCVPage#${general.sectionIds.others}`} currentPath={currentPath} grid={navGrid}>
+        {labels.menu.others}
+      </NavButton>
+      <NavButton path={`/MainCVPage#${general.sectionIds.contact}`} currentPath={currentPath} grid={logInGrid}>
         <>
           <UserOutlined />
-          Iniciar sesión
+          {labels.menu.contact}
         </>
-      </NavButton>
-      <NavButton path="/HelpPage" currentPath={currentPath} grid={navGrid}>
-        Ayuda
       </NavButton>
     </Row>
   );

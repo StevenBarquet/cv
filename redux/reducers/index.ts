@@ -2,20 +2,19 @@
 import { combineReducers } from 'redux';
 // ---Types
 import { ReducerState as AppInfoState } from '@Reducers/appInfo/customTypes';
+import { ReducerState as LanguageState } from '@Reducers/language/customTypes';
 // ---Reducers
-import showFlagReducer from '@Reducers/showFlag';
+import languageReducer from '@Reducers/language';
 import appInfoReducer from '@Reducers/appInfo';
 // ----------------------------------------ALL REDUX STATE TYPE-----------------------------------
 export interface ReduxState {
   appInfoReducer: AppInfoState;
-  showFlagReducer: {
-    showImg: boolean
-  };
+  languageReducer: LanguageState;
 }
 
 // -----------------------------------------ALL REDUX REDUCERS----------------------------------
 const rootReducer = combineReducers({
-  showFlagReducer,
+  languageReducer,
   appInfoReducer
 });
 

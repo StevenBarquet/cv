@@ -2,7 +2,8 @@
 .nav-div {
   width: 100%;
   margin-bottom: 35px;
-  background-color: @colorNavBar;
+  background: @colorNavBar;
+  ;
 }
 .to-home {
   display: block;
@@ -131,9 +132,25 @@ footer{
     margin: 10px auto 10px auto;
   }
 }
+.lang-button{
+  background-color: #51076975;
+  position: fixed;
+  top: 200px;
+  right: 25px;
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  &:hover{
+    background-color: #272727b7;
+  }
+}
 //--------------Temp Vars
 @backgroundDesktop: url(/images/desktop-frame.png);
 @color1: #27265c;
+@color2: #fff;
+@color3: rgb(31, 31, 31);
 /*----------------------------------------HOME-------------------------------------*/
 .home-container{
   &-movil, &-desk{
@@ -165,6 +182,7 @@ footer{
         display: block;
         font-size: 18px;
         font-weight: bold;
+        color: @colorSecondaryText;
       }
     }
     .start-container{
@@ -193,4 +211,127 @@ footer{
     }
   }
   
+}
+/*-------------------------------------INTRODUCTION----------------------------------*/
+.introduction{
+  &-movil, &-desk{
+    h1{
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 42px;
+    }
+    p{
+      color: @color2;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      white-space: pre-line;
+    }
+    .name{
+      background-color: #6e1ccc93;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
+      // Content
+      display: flex;
+      align-items: center;
+      span{
+        background-color: #6e1ccc93;
+        height: 80%;
+        width: 80%;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        // Content
+        padding-left: 40px ;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: @colorSecondaryText;
+      }
+    }
+  }
+  &-desk{
+    background-image: url(/images/desktop-frame.png);
+    background-position: top 15px left 4px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 98% 640px;
+    .description{
+      margin-top: 110px;
+    }
+  }
+  &-movil{
+    background-image: url(/images/movil-frame.png);
+    background-position: top 0px left 0px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 98% 110%;
+    .description{
+      margin-top: 120px;
+    }
+    .name{
+      min-height: 300px;
+    }
+  }
+}
+/*-------------------------------------GRAPHS----------------------------------*/
+.tech-graph{
+  &-movil, &-desk{
+    background-color: @color2;
+    background-color: @backgroundFallBack1;
+    background: @backgroundImage1 repeat center center fixed;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    color: @color3;
+    .tech-counter{
+      h1{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        // --Content
+        text-align: center;
+        color: @color3;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 96px;
+      }
+      h2{
+        text-align: center;
+        color: @color3;
+        font-weight: normal;
+        font-size: 26px;
+        margin-top: -10px;
+      }
+      img{
+        display: block;
+        margin: 5px auto 0px auto;
+        animation: rotation 15s infinite linear;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+    }
+    .english-level{
+      .ant-progress{
+        margin: 60px 0px 15px 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h2{
+        text-align: center;
+        color: @color3;
+        font-weight: normal;
+        font-size: 26px;
+        margin-top: -10px;
+      }
+    }
+  }
 }
