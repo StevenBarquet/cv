@@ -15,34 +15,30 @@ export default function Home(): ReactElement {
   // ---Redux States
   const { winSize } = useSelector((reducers: ReduxState) => reducers.appInfoReducer);
   // ---Main Methods
-  function getBackground() {
-    if (winSize === 'xs' || winSize === 'sm' || winSize === 'md') {
-      return '/images/movil-frame.png';
-    }
-    return '/images/desktop-frame.png';
-  }
   function getPadding() {
     if (winSize === 'xs' || winSize === 'sm' || winSize === 'md') {
-      return { paddingTop: '125px' };
+      return { paddingTop: '155px' };
     }
-    return { paddingTop: '210px' };
+    return { paddingTop: '170px' };
+  }
+  function getClassname() {
+    if (winSize === 'xs' || winSize === 'sm' || winSize === 'md') {
+      return 'home-container-movil';
+    }
+    return 'home-container-desk';
   }
   return (
-    <div className="home-container">
-      <img
-        src={getBackground()} // Route of the image file
-        height="700px"
-        width="94%"
-        alt={ownerData.name.withLast}
-      />
-      <Row style={getPadding()}>
-        <Col span={8}>
-          <Name />
-        </Col>
-        <Col span={12}>
-          <Start />
-        </Col>
-      </Row>
+    <div className={getClassname()}>
+      <section>
+        <Row style={getPadding()}>
+          <Col style={{ width: 300, height: 300 }} xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
+            <Name />
+          </Col>
+          <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
+            <Start />
+          </Col>
+        </Row>
+      </section>
     </div>
   );
 }
