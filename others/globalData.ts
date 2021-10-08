@@ -56,4 +56,85 @@ export const general = {
   }
 };
 
+export const stack = {
+  front: [
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    }
+  ],
+  back: [
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    }
+  ],
+  arch: [
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    },
+    {
+      title: 'React JS',
+      imgRoute: '/images/DevTools/react.svg',
+      level: 5,
+      expertise: 80
+    }
+  ]
+};
+
 export default null;

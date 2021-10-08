@@ -6,6 +6,7 @@ import { ReduxState } from 'Reducers';
 // ---Comps
 import Introduction from 'Comp/MainCV/Introduction';
 import TechGraphs from 'Comp/MainCV/TechGraphs';
+import DevToolsTable from 'Comp/MainCV/DevToolsTable';
 // ---CommonComps
 import LangButton from 'CComps/LangButton';
 // ---Containers
@@ -14,7 +15,7 @@ import NavbarCont from 'Cont/NavbarCont';
 // ----------------------------------------COMPONENT----------------------------------------
 export default function MainCV(): ReactElement {
   // ---Redux States
-  const { winSize, isMovil } = useSelector((reducers: ReduxState) => reducers.appInfoReducer);
+  const { winSize } = useSelector((reducers: ReduxState) => reducers.appInfoReducer);
   // ---Main Methods
   function getClassname() {
     if (winSize === 'xs' || winSize === 'sm' || winSize === 'md') {
@@ -27,7 +28,8 @@ export default function MainCV(): ReactElement {
       <div id="top" className={getClassname()}>
         <NavbarCont />
         <Introduction />
-        <TechGraphs winSize={winSize} isMovil={isMovil} />
+        <TechGraphs />
+        <DevToolsTable />
       </div>
       <LangButton />
     </>
