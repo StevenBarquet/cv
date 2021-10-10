@@ -14,7 +14,7 @@ import NavbarCont from 'Cont/NavbarCont';
 
 // ----------------------------------------COMPONENT----------------------------------------
 export default function MainCV(): ReactElement {
-  // ---Redux States
+  // ------------------------Const, States and Hooks-------------------------
   const { winSize } = useSelector((reducers: ReduxState) => reducers.appInfoReducer);
   // ---Main Methods
   function getClassname() {

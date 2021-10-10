@@ -34,17 +34,14 @@ function JustButtons(props: { currentPath: string }) {
   const { labels } = useSelector((reducers: ReduxState) => reducers.languageReducer);
   return (
     <Row>
-      <NavButton path={`/MainCVPage#${general.sectionIds.intro}`} currentPath={currentPath} grid={navGrid}>
-        {labels.menu.intro}
-      </NavButton>
       <NavButton path={`/MainCVPage#${general.sectionIds.stack}`} currentPath={currentPath} grid={navGrid}>
         {labels.menu.stack}
       </NavButton>
       <NavButton path={`/MainCVPage#${general.sectionIds.exp}`} currentPath={currentPath} grid={navGrid}>
         {labels.menu.experience}
       </NavButton>
-      <NavButton path={`/MainCVPage#${general.sectionIds.others}`} currentPath={currentPath} grid={navGrid}>
-        {labels.menu.others}
+      <NavButton path={`/MainCVPage#${general.sectionIds.knowledge}`} currentPath={currentPath} grid={navGrid}>
+        {labels.menu.knowledge}
       </NavButton>
       <NavButton path={`/MainCVPage#${general.sectionIds.contact}`} currentPath={currentPath} grid={logInGrid}>
         <>
@@ -94,7 +91,7 @@ export default function Navbar(props: Props): ReactElement {
       <Col xs={24} sm={24} md={4} lg={4} xl={6} xxl={6}>
         <Link to="/">
           <div className="to-home">
-            <img src={logo} alt="Shelly" width="100%" />
+            <img src={logo} alt="SB" width="100%" />
           </div>
         </Link>
       </Col>

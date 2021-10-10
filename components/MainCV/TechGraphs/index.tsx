@@ -1,23 +1,34 @@
 // ---Dependencys
 import { ReactElement } from 'react';
 import { Row, Col } from 'antd';
+// ---Redux
+import { useSelector } from 'react-redux';
+import { ReduxState } from 'Reducers';
 // ---Comps
 import TechCounter from 'Comp/MainCV/TechGraphs/TechCounter';
 import EngLevel from 'Comp/MainCV/TechGraphs/EngLevel';
 import Graphs from 'Comp/MainCV/TechGraphs/Graphs';
-// ---Others
-import { stack } from 'Others/globalData';
 
 // ------------------------------------------ PROPS-----------------------------------------
 interface Data {
-  area: 'Back'| 'Front'| 'Arch';
+  area: 'Back' | 'Front' | 'Arch';
   number: number;
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
-export default function Introduction() : ReactElement {
+export default function Introduction(): ReactElement {
   // ------------------------Const, States and Hooks-------------------------
-  const graphData: Array<Data> = [{ area: 'Front', number: stack.front.length }, { area: 'Arch', number: stack.arch.length }, { area: 'Back', number: stack.back.length }];
-  const count = stack.front.length + stack.back.length + stack.arch.length;
+  const { data } = useSelector(
+    (reducers: ReduxState) => reducers.languageReducer
+  );
+  const { stack } = data;
+  const graphData: Array<Data> = [
+    { area: 'Front', number: stack.front.devTools.length },
+    { area: 'Arch', number: stack.arch.devTools.length },
+    { area: 'Back', number: stack.back.devTools.length }
+  ];
+  const count = stack.front.devTools.length
+    + stack.back.devTools.length
+    + stack.arch.devTools.length;
   // -----------------------------------Render---------------------------------
   return (
     <Row id="stack" className="tech-graph">

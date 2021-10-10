@@ -12,7 +12,7 @@ import LangButton from 'CComps/LangButton';
 
 // ----------------------------------------COMPONENT----------------------------------------
 export default function Home(): ReactElement {
-  // ---Redux States
+  // ------------------------Const, States and Hooks-------------------------
   const { winSize } = useSelector((reducers: ReduxState) => reducers.appInfoReducer);
   // ---Main Methods
   function getPadding() {
