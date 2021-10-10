@@ -1,5 +1,5 @@
 // ---Dependencys
-import { ReactElement, useReducer } from 'react';
+import { ReactElement, useReducer, useRef } from 'react';
 import { Tabs } from 'antd';
 // ---Redux
 import { useSelector } from 'react-redux';
@@ -63,13 +63,18 @@ export default function DevToolsTable(): ReactElement {
     reverse: false
   };
   const [state, dispatch] = useReducer(reducer, initalState);
+  const revreseCardRef = useRef<null | HTMLElement>(null);
   // ------------------------Main Method-------------------------
-  function onFlip() {
-    dispatch({ type: FLIP });
-  }
   function onToolChange(tools: Array<Technolgy>, index: number) {
     const devTool = tools[index];
     dispatch({ type: TOOL_CHANGE, payload: devTool });
+    scrollToReverse();
+  }
+  // ------------------------Aux Method-------------------------
+  function scrollToReverse() {
+    if (revreseCardRef && revreseCardRef.current) {
+      revreseCardRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   }
   // ------------------------Render-------------------------
   return (
@@ -80,21 +85,21 @@ export default function DevToolsTable(): ReactElement {
             onToolChange={onToolChange}
             devSkill={front}
           />
-          <ReverseCard devTool={state.devTool} />
+          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
         </TabPane>
         <TabPane tab={second} key={second}>
           <FrontalCard
             onToolChange={onToolChange}
             devSkill={back}
           />
-          <ReverseCard devTool={state.devTool} />
+          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
         </TabPane>
         <TabPane tab={third} key={third}>
           <FrontalCard
             onToolChange={onToolChange}
             devSkill={arch}
           />
-          <ReverseCard devTool={state.devTool} />
+          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
         </TabPane>
       </Tabs>
     </div>

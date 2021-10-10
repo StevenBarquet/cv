@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 // ---Dependencys
-import { ReactElement } from 'react';
+import { ReactElement, Ref, MutableRefObject } from 'react';
 import {
   Row, Col, Progress, Rate
 } from 'antd';
@@ -15,16 +15,17 @@ import { ownerData } from 'Others/global-config';
 // ------------------------------------------ PROPS-----------------------------------------
 interface Props {
   devTool: Technolgy;
+  revreseCardRef: MutableRefObject<HTMLElement | null>
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
-export default function ReverseCard({ devTool }: Props) : ReactElement {
+export default function ReverseCard({ devTool, revreseCardRef }: Props) : ReactElement {
   // ---Redux States
   const { labels } = useSelector((reducers: ReduxState) => reducers.languageReducer);
   const {
     imgRoute, title, expertiseNumber, expertise, stars, experience
   } = devTool;
   return (
-    <Row id="devTool" className="reverse-card">
+    <Row ref={revreseCardRef as Ref<HTMLDivElement>} className="reverse-card">
       <Col xs={24} sm={24} md={8} lg={6} xl={6} xxl={6}>
         <img
           src={imgRoute}
