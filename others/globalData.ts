@@ -131,8 +131,8 @@ export const stackEnglish: Stack = {
         title: 'Axios',
         imgRoute: '/images/DevTools/axios.webp',
         stars: 5,
-        expertise: 'Advanced',
-        expertiseNumber: 10,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
         experience: 'Really easy to understand, using it for request handling in the frontend and in the backend for end to end communication.'
       },
       {
@@ -142,6 +142,24 @@ export const stackEnglish: Stack = {
         expertise: 'Intermediate',
         expertiseNumber: 55,
         experience: 'An alternative to create dynamic dashboards and charts with lots of options for customize, it is not the fastest charts library and neither the easiest one but it is reliable and an amazing tool.'
+      },
+      {
+        title: 'Joi',
+        imgRoute: '/images/DevTools/joi.webp',
+        stars: 5,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: `As a developer I've tested a lot of tools to control the data types but I haven't found anything better than joi. 
+
+        It is amazingly precise and fast, it allows you to make simple validation or super complex validations in no time. It's super useful for the backend to validate de request data and for the frontend to make form validations.`
+      },
+      {
+        title: 'Eslint',
+        imgRoute: '/images/DevTools/eslint.webp',
+        stars: 5,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: "Currently I can't code without eslint, It makes me a lot more productive when I write code. I've made a couple of eslint configurations for the frontend and for the backend and yes the configuration part could be  tedious but it's woth 100%"
       }
 
     ],
@@ -165,14 +183,12 @@ export const stackEnglish: Stack = {
         experience: 'Node is the base where i run every backend and frontend application and it is my main web and application server when I do freelance development.'
       },
       {
-        title: 'Joi',
-        imgRoute: '/images/DevTools/joi.webp',
-        stars: 5,
-        expertise: 'Advanced',
-        expertiseNumber: 80,
-        experience: `As a developer I've tested a lot of tools to control the data types but I haven't found anything better than joi. 
-
-        It is amazingly precise and fast, it allows you to make simple validation or super complex validations in no time.`
+        title: 'Express',
+        imgRoute: '/images/DevTools/express.webp',
+        stars: 4,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'Express is lightweight and fast, and has everything that I need to build APIs. Also I would like to test Koa in the close future.'
       },
       {
         title: 'Typescript',
@@ -183,16 +199,122 @@ export const stackEnglish: Stack = {
         experience: `I love typescript, at the beginning I wasn't very convinced because I didn't understand at 100% the special types and code using typescript used to take me 2 or 3 times more than plain javascript.
         
         I'm not an expert yet but i like typescript very much now I code everything that I can with it`
+      },
+      {
+        title: 'JW Tokens',
+        imgRoute: '/images/DevTools/jwt.webp',
+        stars: 4,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: "Json web tokens are one alternative that I use to implement security in the frontend and the backend, most of the projects that I've made are for financial entities so the security has to be really strong."
+      },
+      {
+        title: 'Joi',
+        imgRoute: '/images/DevTools/joi.webp',
+        stars: 5,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: `As a developer I've tested a lot of tools to control the data types but I haven't found anything better than joi. 
+
+        It is amazingly precise and fast, it allows you to make simple validation or super complex validations in no time. It's super useful for the backend to validate de request data and for the frontend to make form validations.`
+      },
+      {
+        title: 'VS Code',
+        imgRoute: '/images/DevTools/vscode.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'My favorite IDE, no matter what kind of development or language I use vs for every project.'
+      },
+      {
+        title: 'GraphQL',
+        imgRoute: '/images/DevTools/apollo.webp',
+        stars: 5,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Don't have even the basics yet but currently I have a project working with a graphql server and I currently I'm studing the setup of the graphQL server. It's really intresting so far."
+      },
+      {
+        title: 'mongoDB',
+        imgRoute: '/images/DevTools/mongodb.webp',
+        stars: 5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "I'm not a database administrator but the years that I've been using mongoDB allowed me to understand their amazing features, and also to make backups and restore them, get, delete or modify documents and collections trough the cli and mongoDB Compass."
+      },
+      {
+        title: 'Mongoose',
+        imgRoute: '/images/DevTools/mongoose.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'There is no backend development and mongoDB without mongoose, super useful and it helps me a lot with the mongoDB Querying and to control de document model for de DB.'
+      },
+      {
+        title: 'BCrypt',
+        imgRoute: '/images/DevTools/BCrypt.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: "It's an alternative to hash data before it goes to de data base. It doesn't have de highest level of encryption for security but if its used with other security tools and strategies it becomes a really strong solution."
+      },
+      {
+        title: 'Bull',
+        imgRoute: '/images/DevTools/bull.webp',
+        stars: 3.5,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "It's package that allows you to schedule cron jobs. I'm very interested in it because a client ask me to schedule some tasks next year and since I'm a Javascript/Typescript developer would love to do it in my main language instead of using java with quartz or something like that."
+      },
+      {
+        title: 'Axios',
+        imgRoute: '/images/DevTools/axios.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'Really easy to understand, using it for request handling in the frontend and in the backend for end to end communication.'
+      },
+      {
+        title: 'Nodemailer',
+        imgRoute: '/images/DevTools/nodemailer.webp',
+        stars: 4,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "Nodemailer it's a package that allow us to connect to a smtp client for manage emails. I've only used it for simple notification, I've never attached files or read other mails and I'm not sure if node mailer allow us to do that task but for notification it's an amazing library."
+      },
+      {
+        title: 'AWS SNS',
+        imgRoute: '/images/DevTools/sns.webp',
+        stars: 2,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "I've use the amazon service SNS to send sms messages but it wasn't a nice experience. But at the end of the day it works and send sms through an api."
+      },
+      {
+        title: 'Mercado Pago',
+        imgRoute: '/images/DevTools/mercadoP.webp',
+        stars: 4,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: "The only payment service that I've integrated so far. I enjoyed working with it's SDK but I think it needs a lot more features that it has. Currently interesting in stripe for payment services integration."
+      },
+      {
+        title: 'Eslint',
+        imgRoute: '/images/DevTools/eslint.webp',
+        stars: 5,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: "Currently I can't code without eslint, It makes me a lot more productive when I write code. I've made a couple of eslint configurations for the frontend and for the backend and yes the configuration part could be  tedious but it's woth 100%"
       }
     ],
     achivements: [
       'Development of APIs REST and RESTful',
       'Development in microserices arquitecture',
-      'Development of security midleware to secure requests',
+      'Development of security midleware to secure APIs',
       'Data encryption',
       'Tokens handling',
       'File management',
-      'Notification throgh mail and sms',
+      'Notification through mails and sms',
       'Integration to payment services'
     ]
   },
@@ -372,7 +494,8 @@ export const englishLabels = {
   enjoyUsing: 'How much I like?',
   opinionAndUsage: 'Opinion, usage and experience...',
   achievements: 'Achievements',
-  workExp: 'Work experience'
+  workExp: 'Work experience',
+  contactMe: 'Contact me'
 };
 
 export const spanishLabels = {
@@ -395,7 +518,8 @@ export const spanishLabels = {
   enjoyUsing: '¿Cuanto me gusta?',
   opinionAndUsage: 'Opinión, uso y experiencia...',
   achievements: 'Logros',
-  workExp: 'Experiencia laboral'
+  workExp: 'Experiencia laboral',
+  contactMe: 'Contáctame'
 };
 
 export default null;

@@ -12,6 +12,7 @@ import WorkTiemeLine from 'Comp/MainCV/WorkTiemeLine';
 import LangButton from 'CComps/LangButton';
 // ---Containers
 import NavbarCont from 'Cont/NavbarCont';
+import Footer from 'Cont/Footer';
 
 // ----------------------------------------COMPONENT----------------------------------------
 export default function MainCV(): ReactElement {
@@ -32,6 +33,7 @@ export default function MainCV(): ReactElement {
         <TechGraphs />
         <DevToolsTable />
         <WorkTiemeLine />
+        <Footer />
       </div>
       <LangButton />
     </>

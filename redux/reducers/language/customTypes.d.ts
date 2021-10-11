@@ -57,6 +57,7 @@ export interface Labels {
   opinionAndUsage: string;
   achievements: string;
   workExp: string;
+  contactMe: string;
 }
 
 export interface ReducerState {
