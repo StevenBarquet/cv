@@ -337,6 +337,14 @@ export const stackEnglish: Stack = {
         experience: "Definitely not my strongest linux, I've struggled with provisioning, configuration and installation of drivers and software but at least I've already tried RHEL based distros and have and idea of how it works."
       },
       {
+        title: 'Arch Linux',
+        imgRoute: '/images/DevTools/archlinux.webp',
+        stars: 4,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Honestly I've never touched any linux distro based on arch, in fact I'm afraid of arch because maybe it is too much complex for my current linux skills but it got my interest since a good friend of mine told me that his manjaro distro (based on arch) it's amazing and super fast."
+      },
+      {
         title: 'Docker',
         imgRoute: '/images/DevTools/docker.webp',
         stars: 5,
@@ -345,6 +353,62 @@ export const stackEnglish: Stack = {
         experience: `I love docker, my strongest skills of containerization are with node apps. 
 
         I can handle deploys, ports, docker networks, volumes as well as the basics.`
+      },
+      {
+        title: 'Lets Encrypt',
+        imgRoute: '/images/DevTools/letsencrypt.webp',
+        stars: 5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "Before I knew let's encrypt I used to spend money and resources in tls certificates and it was painful to think in the setup and renovation of the certificates. Not the biggest expert but I've work with this tool a couple of times."
+      },
+      {
+        title: 'Nginx',
+        imgRoute: '/images/DevTools/nginx.webp',
+        stars: 4,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Not even the basics but I'm really interested in this server to handle request and serve applications."
+      },
+      {
+        title: 'Open-Litespeed',
+        imgRoute: '/images/DevTools/openlitespeed.webp',
+        stars: 1,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "very bad experience with this web server, I don't know if it was my lack of skill or it's not a good alternative, at least for modern development."
+      },
+      {
+        title: 'DNS',
+        imgRoute: '/images/DevTools/dns.webp',
+        stars: 3,
+        expertise: 'Beginner',
+        expertiseNumber: 20,
+        experience: "Again not a sysadmin but I've done a couple of dns configurations to handle the traffic through a domain. I've used dns of google, godaddy, hostgator and digital ocean."
+      },
+      {
+        title: 'Ansible',
+        imgRoute: '/images/DevTools/ansible.webp',
+        stars: 4,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: 'It is amazing for automation but sure it may be another tools that offer more benefits, but so far ansible has allowed me to automate CI and provisioning environments.'
+      },
+      {
+        title: 'VS Code',
+        imgRoute: '/images/DevTools/vscode.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'My favorite IDE, no matter what kind of development or language I use vs for every project.'
+      },
+      {
+        title: 'Digital Ocean',
+        imgRoute: '/images/DevTools/digitalocean.webp',
+        stars: 5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "I'm very used to work with digital ocean cloud, it is easy to use and very cheap in comparison to other cloud providers. I haven't used the Digital Ocean API yet but if someday have the opportunity to learn and use Terraform I'm going to be very intrested in using their API."
       }
     ],
     achivements: [
@@ -694,6 +758,14 @@ export const stackSpanish: Stack = {
         experience: "Definitely not my strongest linux, I've struggled with provisioning, configuration and installation of drivers and software but at least I've already tried RHEL based distros and have and idea of how it works."
       },
       {
+        title: 'Arch Linux',
+        imgRoute: '/images/DevTools/archlinux.webp',
+        stars: 4,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Honestly I've never touched any linux distro based on arch, in fact I'm afraid of arch because maybe it is too much complex for my current linux skills but it got my interest since a good friend of mine told me that his manjaro distro (based on arch) it's amazing and super fast."
+      },
+      {
         title: 'Docker',
         imgRoute: '/images/DevTools/docker.webp',
         stars: 5,
@@ -702,6 +774,62 @@ export const stackSpanish: Stack = {
         experience: `I love docker, my strongest skills of containerization are with node apps. 
 
         I can handle deploys, ports, docker networks, volumes as well as the basics.`
+      },
+      {
+        title: 'Lets Encrypt',
+        imgRoute: '/images/DevTools/letsencrypt.webp',
+        stars: 5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "Before I knew let's encrypt I used to spend money and resources in tls certificates and it was painful to think in the setup and renovation of the certificates. Not the biggest expert but I've work with this tool a couple of times."
+      },
+      {
+        title: 'Nginx',
+        imgRoute: '/images/DevTools/nginx.webp',
+        stars: 4,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Not even the basics but I'm really interested in this server to handle request and serve applications."
+      },
+      {
+        title: 'Open-Litespeed',
+        imgRoute: '/images/DevTools/openlitespeed.webp',
+        stars: 1,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "very bad experience with this web server, I don't know if it was my lack of skill or it's not a good alternative, at least for modern development."
+      },
+      {
+        title: 'DNS',
+        imgRoute: '/images/DevTools/dns.webp',
+        stars: 3,
+        expertise: 'Beginner',
+        expertiseNumber: 20,
+        experience: "Again not a sysadmin but I've done a couple of dns configurations to handle the traffic through a domain. I've used dns of google, godaddy, hostgator and digital ocean."
+      },
+      {
+        title: 'Ansible',
+        imgRoute: '/images/DevTools/ansible.webp',
+        stars: 4,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: 'It is amazing for automation but sure it may be another tools that offer more benefits, but so far ansible has allowed me to automate CI and provisioning environments.'
+      },
+      {
+        title: 'VS Code',
+        imgRoute: '/images/DevTools/vscode.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'My favorite IDE, no matter what kind of development or language I use vs for every project.'
+      },
+      {
+        title: 'Digital Ocean',
+        imgRoute: '/images/DevTools/digitalocean.webp',
+        stars: 5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "I'm very used to work with digital ocean cloud, it is easy to use and very cheap in comparison to other cloud providers. I haven't used the Digital Ocean API yet but if someday have the opportunity to learn and use Terraform I'm going to be very intrested in using their API."
       }
     ],
     achivements: [

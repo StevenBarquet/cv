@@ -57,6 +57,7 @@ export default function Graphs({ gData }: { gData: Array<Data> }): ReactElement 
     }
 
     const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.min = 0;
     // if (variant && variant === 'vertical') {
     //   valueAxis.renderer.opposite = true
     // }
