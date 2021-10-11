@@ -26,6 +26,14 @@ export const stackEnglish: Stack = {
         I'm not an expert yet but i like typescript very much now I code everything that I can with it`
       },
       {
+        title: 'Node JS',
+        imgRoute: '/images/DevTools/nodejs.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'Node is the base where i run every backend and frontend application and it is my main web and application server when I do freelance development.'
+      },
+      {
         title: 'Redux',
         imgRoute: '/images/DevTools/redux.webp',
         stars: 3.5,
@@ -70,7 +78,72 @@ export const stackEnglish: Stack = {
         experience: `This library really got my attention in a project (not developed by me) with amazing UI so I would like to test Material in order to know what it has to offer. 
 
         My only experience is basic examples of simple components and reviewing the implementetion of Material in other projects.`
+      },
+      {
+        title: 'VS Code',
+        imgRoute: '/images/DevTools/vscode.webp',
+        stars: 5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'My favorite IDE, no matter what kind of development or language I use vs for every project.'
+      },
+      {
+        title: 'Shopify',
+        imgRoute: '/images/DevTools/shopify.webp',
+        stars: 3.5,
+        expertise: 'Beginner',
+        expertiseNumber: 20,
+        experience: 'Definitely not an expert, I used to dislike shopify a lot but then I knew other ecommerce platforms and then realised that shopify was really good, not as good as a custom development but has benefits that are worth.'
+      },
+      {
+        title: 'Next JS',
+        imgRoute: '/images/DevTools/nextjs.webp',
+        stars: 4.5,
+        expertise: 'Pre-Intermediate',
+        expertiseNumber: 35,
+        experience: "I'm really impressed with next js, it is very optimized and has awesome features. It is really easy to setup but it can also be hard if you need to much configurations for your projects."
+      },
+      {
+        title: 'Less',
+        imgRoute: '/images/DevTools/less.webp',
+        stars: 4.5,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'Generally all my frontend projects are built with less as css preprocessor. I know that less has much features to offer but for now I just using nesting and variables.'
+      },
+      {
+        title: 'JW Tokens',
+        imgRoute: '/images/DevTools/jwt.webp',
+        stars: 4,
+        expertise: 'Advanced',
+        expertiseNumber: 80,
+        experience: "Json web tokens are one alternative that I use to implement security in the frontend and the backend, most of the projects that I've made are for financial entities so the security has to be really strong."
+      },
+      {
+        title: 'Apollo',
+        imgRoute: '/images/DevTools/apollo.webp',
+        stars: 3,
+        expertise: 'Basic',
+        expertiseNumber: 10,
+        experience: "Don't have even the basics yet but currently I have a project working with a graphql server and I' have to change some configuration of apollo so hope I'll learn a bit of apollo soon."
+      },
+      {
+        title: 'Axios',
+        imgRoute: '/images/DevTools/axios.webp',
+        stars: 5,
+        expertise: 'Advanced',
+        expertiseNumber: 10,
+        experience: 'Really easy to understand, using it for request handling in the frontend and in the backend for end to end communication.'
+      },
+      {
+        title: 'AM charts',
+        imgRoute: '/images/DevTools/amcharts.webp',
+        stars: 4,
+        expertise: 'Intermediate',
+        expertiseNumber: 55,
+        experience: 'An alternative to create dynamic dashboards and charts with lots of options for customize, it is not the fastest charts library and neither the easiest one but it is reliable and an amazing tool.'
       }
+
     ],
     achivements: [
       'Dynamic responsive design for all screen resolutions (not just mobile and desktop).',
@@ -89,7 +162,7 @@ export const stackEnglish: Stack = {
         stars: 5,
         expertise: 'Intermediate',
         expertiseNumber: 55,
-        experience: 'Node is the base where i run every backend application and it is my main web and application server when I do freelance development.'
+        experience: 'Node is the base where i run every backend and frontend application and it is my main web and application server when I do freelance development.'
       },
       {
         title: 'Joi',
@@ -267,7 +340,7 @@ export const spanishData = {
 
 // ----------------------------------Not multilanguage data------------------------------
 export const general = {
-  englishLevel: 75,
+  englishLevel: 80,
   sectionIds: {
     top: 'top',
     intro: 'intro',
