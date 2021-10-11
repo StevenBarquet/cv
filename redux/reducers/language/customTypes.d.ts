@@ -21,10 +21,19 @@ export interface Stack {
   arch: DevSkill;
 }
 
+export type JobDetail = {
+  date: string;
+  company: string;
+  title: string;
+  time: string;
+  description: string;
+}
+
 export interface Data {
   jobWanted: string;
   introduction: string;
-  stack: Stack
+  stack: Stack;
+  workExp: Array<JobDetail>;
 }
 
 export interface Labels {
@@ -47,6 +56,7 @@ export interface Labels {
   enjoyUsing: string;
   opinionAndUsage: string;
   achievements: string;
+  workExp: string;
 }
 
 export interface ReducerState {

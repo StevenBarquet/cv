@@ -52,9 +52,9 @@ function reducer(state: State, action: Action) {
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function DevToolsTable(): ReactElement {
   // ------------------------Const, States and Hooks-------------------------
-  const { labels, data } = useSelector(
-    (reducers: ReduxState) => reducers.languageReducer
-  );
+  const { languageReducer, appInfoReducer } = useSelector((reducers: ReduxState) => reducers);
+  const { labels, data } = languageReducer;
+  const { isMovil } = appInfoReducer;
   const { first, second, third } = labels.DevSkills;
   const { front, back, arch } = data.stack;
   // ---State
@@ -68,7 +68,9 @@ export default function DevToolsTable(): ReactElement {
   function onToolChange(tools: Array<Technolgy>, index: number) {
     const devTool = tools[index];
     dispatch({ type: TOOL_CHANGE, payload: devTool });
-    scrollToReverse();
+    if (isMovil) {
+      scrollToReverse();
+    }
   }
   // ------------------------Aux Method-------------------------
   function scrollToReverse() {

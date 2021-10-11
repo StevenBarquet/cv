@@ -26,7 +26,7 @@ export default function LangButton(): ReactElement {
   }
   return (
     <button type="button" className="lang-button" onClick={invertLanguage}>
-      {currentLan === 'english' ? 'Es' : 'En'}
+      {currentLan === 'english' ? 'ES' : 'EN'}
     </button>
   );
 }

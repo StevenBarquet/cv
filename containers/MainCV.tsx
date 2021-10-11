@@ -7,6 +7,7 @@ import { ReduxState } from 'Reducers';
 import Introduction from 'Comp/MainCV/Introduction';
 import TechGraphs from 'Comp/MainCV/TechGraphs';
 import DevToolsTable from 'Comp/MainCV/DevToolsTable';
+import WorkTiemeLine from 'Comp/MainCV/WorkTiemeLine';
 // ---CommonComps
 import LangButton from 'CComps/LangButton';
 // ---Containers
@@ -30,6 +31,7 @@ export default function MainCV(): ReactElement {
         <Introduction />
         <TechGraphs />
         <DevToolsTable />
+        <WorkTiemeLine />
       </div>
       <LangButton />
     </>

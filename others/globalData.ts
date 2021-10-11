@@ -1,5 +1,5 @@
 // ---Types
-import { Stack } from '@Reducers/language/customTypes';
+import { Stack, JobDetail } from '@Reducers/language/customTypes';
 
 // ----------------------------------Technological Stack------------------------------
 export const stackEnglish: Stack = {
@@ -164,6 +164,83 @@ export const stackEnglish: Stack = {
   }
 };
 
+// ----------------------------------Work Expirience------------------------------
+const engWorkExp: Array<JobDetail> = [
+  {
+    date: '2019-Jan',
+    company: 'Interware',
+    title: 'Presale engineer and Tech lead',
+    time: '1.7 Years (current job)',
+    description: 'After being asigned in different proyects as developer I got an offer from the ceo to help as PreSale engineer helping the sales team meeting with clients and offering development solutions  half time and the other half as tech lead managin proyects and being responsable of the development. I was very stressed out at the beginning because I was supposed to be the expert in all sort technologies with clients so I studied a lot to be able to fulfill the new responsibilities that currently have.'
+  },
+  {
+    date: '2016-March',
+    company: 'Interware',
+    title: 'Fullstack Senior Developer',
+    time: '2.5 Years',
+    description: 'Design and develop diferent web systems using modern technogies like the most updated version of react, redux, node, server side render (ssr), webpack and flow for the development. Also for the quality side I use husky, prettier, checkstyle, eslint and sonarqube to avoid syntax and code structre mistakes and JEST with enzyme for testing part, ensuring the quality and efficiency of the software'
+  },
+  {
+    date: '2015-Jan',
+    company: 'PBG',
+    title: 'Head of Development',
+    time: '1.5 Years',
+    description: 'The company did not have a development area before my arrival, the IT products they needed were rented out to external consultants. During my stay, I used my experience in solving the problems that the consultants try to solve such as slow loading of the site, updating their website, promoting good practices in the code, helping all departments to have a more friendly, dynamic and functional IT environment and supervise that the products contracted in IT consultants are what they are supposed to be.'
+  },
+  {
+    date: '2014-Jan',
+    company: 'Freelance',
+    title: 'Frontend Developer',
+    time: '1 Year',
+    description: 'Design, implement and maintain web applications in different phases, analysis, design, development, testing and maintenance using most used technologies (html5, Javascript, JQuery ,css3, boostrap, responsive design, ). Connection to Web Services and Apis, proposals for solutions, programming, testing and debugging.'
+  },
+  {
+    date: '2013-Jan',
+    company: 'IBM',
+    title: 'Jr Application Developer Java & Web Technologies',
+    time: '1 Year',
+    description: 'Design, implement and maintain java application phases, take part in software development activities, conduct software analysis, programming, testing and debugging. As jr developer I mainly support and document the operation.'
+  }
+];
+
+const espWorkExp: Array<JobDetail> = [
+  {
+    date: '2019-Enero',
+    company: 'Interware',
+    title: 'Ingeniero Preventa y Líder Técnico',
+    time: '1.7 Años (current job)',
+    description: 'Después de haber sido asignado en diferentes proyectos como desarrollador, recibí una oferta del director para ayudar como ingeniero Preventa ayudando al equipo de ventas a reunirse con los clientes y ofrecer soluciones de desarrollo medio tiempo y la otra mitad como líder técnico en proyectos y ser responsable del desarrollo. Estaba muy estresado al principio porque se suponía que yo era el experto en todo tipo de tecnologías con los clientes, así que estudié mucho para poder cumplir con las nuevas responsabilidades que tengo actualmente.'
+  },
+  {
+    date: '2016-Marzo',
+    company: 'Interware',
+    title: 'Desarrollador Fullstack Senior',
+    time: '2.5 Años',
+    description: 'Diseñar y desarrollar diferentes sistemas web utilizando tecnologías modernas como la versión más actualizada de react, redux, node, server side render (ssr), webpack y flow para el desarrollo. También por el lado de la calidad utilicé husky, prettier, checkstyle, eslint y sonarqube para evitar errores de sintaxis y estructura en el código y JEST con enzyme para la parte de pruebas, asegurando la calidad y eficiencia del software.'
+  },
+  {
+    date: '2015-Enero',
+    company: 'PBG',
+    title: 'Jefe de Desarrollo',
+    time: '1.5 Años',
+    description: 'La empresa no tenía un área de desarrollo antes de mi llegada, los productos de TI que necesitaban se alquilaron a consultores externos. Durante mi estadía, utilicé mi experiencia en la solución de los problemas que los consultores intentan resolver como la carga lenta del sitio, la actualización de su sitio web, la promoción de buenas prácticas en el código, ayudando a todos los departamentos a tener una experiencia más amigable, dinámica y funcional en su ambiente de TI además de supervisar que los productos contratados de TI sean lo esperado.'
+  },
+  {
+    date: '2014-Enero',
+    company: 'Freelance',
+    title: 'Desarrollador Frontend',
+    time: '1 Año',
+    description: 'Diseñar, implementar y mantener aplicaciones web en diferentes fases, análisis, diseño, desarrollo, testing y mantenimiento utilizando las tecnologías más utilizadas (html5, Javascript, JQuery, css3, boostrap, responsive design,). Conexión a Web Services y Apis, propuestas de soluciones, programación, testing y depuración.'
+  },
+  {
+    date: '2013-Enero',
+    company: 'IBM',
+    title: 'Desarrollador Jr de aplicaciones Java y Technologias Web',
+    time: '1 Año',
+    description: 'Diseño, implementación y mantenimiento de aplicaciones Java, actividades de desarrollo de software, análisis, programación, pruebas y depuración de software. Como desarrollador jr, principalmente apoyo y documente la operación.'
+  }
+];
+
 // ----------------------------------Basic Info------------------------------
 export const englishData = {
   jobWanted: 'Team leader javascript senior developer',
@@ -172,7 +249,9 @@ export const englishData = {
   Currently Looking for personal grow and modern technologies, for the moment I prefer remote work.
   
   I'm someone that is always looking to stay updated and active in IT and development, who works compromised with results and quality providing the best experience for everyone, I'not focused only in my code, I care about my team, the client, the final user and the company where I work.`,
-  stack: stackEnglish
+  time: '1 Year',
+  stack: stackEnglish,
+  workExp: engWorkExp
 };
 
 export const spanishData = {
@@ -182,7 +261,8 @@ export const spanishData = {
   Actualmente buscando crecimiento personal y tecnologías interesantes, por el momento prefiero trabajo remoto.
   
   Soy alguien que siempre busca estar actualizado y activo en  IT y desarrollo, siempre comprometido con resultados y calidad proveyendo la mejor experiencia para todos. No me enfoco sólo en el código, me preocupo por mi equipo, los clientes, el usuario final y la compañía donde trabajo.`,
-  stack: stackEnglish
+  stack: stackEnglish,
+  workExp: espWorkExp
 };
 
 // ----------------------------------Not multilanguage data------------------------------
@@ -218,7 +298,8 @@ export const englishLabels = {
   },
   enjoyUsing: 'How much I like?',
   opinionAndUsage: 'Opinion, usage and experience...',
-  achievements: 'Achievements'
+  achievements: 'Achievements',
+  workExp: 'Work experience'
 };
 
 export const spanishLabels = {
@@ -240,7 +321,8 @@ export const spanishLabels = {
   },
   enjoyUsing: '¿Cuanto me gusta?',
   opinionAndUsage: 'Opinión, uso y experiencia...',
-  achievements: 'Logros'
+  achievements: 'Logros',
+  workExp: 'Experiencia laboral'
 };
 
 export default null;
