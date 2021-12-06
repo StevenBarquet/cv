@@ -1,28 +1,36 @@
 // ---Dependencys
 import { ReactElement } from 'react';
-import { Timeline } from 'antd';
+import { Button } from 'antd';
+import { ArrowRightOutlined } from '@ant-design/icons';
+import Carousel from 'react-multi-carousel';
+import './index.less';
 // ---Types
 import { JobDetail } from '@Reducers/language/customTypes';
-
-const { Item } = Timeline;
 
 // ------------------------------------------ AUX COMP
 interface WorkItemProps {
   company: string;
   title: string;
   time: string;
-  onClickItem: () => void
+  date: string;
+  onClicK: ()=> void;
 }
 function WorkItem(props: WorkItemProps) {
   const {
-    company, title, time, onClickItem
+    company, title, time, date, onClicK
   } = props;
   return (
-    <button type="button" onClick={onClickItem}>
+    <div className="work-item">
       <h3>{company}</h3>
       <h4>{title}</h4>
       <h4 className="time">{time}</h4>
-    </button>
+      <h5>{date}</h5>
+      <Button onClick={onClicK} type="primary">
+        More details
+        {' '}
+        <ArrowRightOutlined />
+      </Button>
+    </div>
   );
 }
 // ------------------------------------------ PROPS-----------------------------------------
@@ -35,25 +43,57 @@ interface Props {
 export default function TiemeLine(props: Props): ReactElement {
   // ------------------------Const, States and Hooks-------------------------
   const { showModal, setModalJob, workExp } = props;
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1200 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 992 },
+      items: 2
+    },
+    tablet: {
+      breakpoint: { max: 992, min: 576 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 576, min: 0 },
+      items: 1
+    }
+  };
   // ------------------------Main Methods-------------------------
   function onClickItem(job: JobDetail) {
     setModalJob(job);
     showModal();
   }
   return (
-    <Timeline mode="left">
+    <Carousel
+      swipeable
+      draggable={false}
+      showDots
+      responsive={responsive}
+      ssr // means to render carousel on server-side.
+      autoPlaySpeed={1000}
+      keyBoardControl
+      transitionDuration={500}
+      containerClass="carousel-container"
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
       {
         workExp.map((jobExp) => (
-          <Item key={jobExp.title} label={jobExp.date}>
+          <div key={jobExp.title}>
             <WorkItem
-              onClickItem={() => { onClickItem(jobExp); }}
               time={jobExp.time}
               company={jobExp.company}
               title={jobExp.title}
+              date={jobExp.date}
+              onClicK={() => { onClickItem(jobExp); }}
             />
-          </Item>
+          </div>
         ))
       }
-    </Timeline>
+    </Carousel>
   );
 }

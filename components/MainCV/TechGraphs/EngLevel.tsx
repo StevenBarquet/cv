@@ -14,6 +14,7 @@ export default function EngLevel() : React.ReactElement {
     <div className="english-level">
       <Progress
         type="circle"
+        status="active"
         strokeColor={{
           '0%': '#1ef0ed',
           '100%': '#27265c'

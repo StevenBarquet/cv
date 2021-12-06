@@ -39,9 +39,8 @@ export default function Introduction(): ReactElement {
             <Row>
               <Col span={6}>
                 <img
-                  src="/images/profile-pic.svg" // Route of the image file
-                  height="126px"
-                  width="126px"
+                  src="/images/profile-pic.jpg" // Route of the image file
+                  width="90px"
                   alt={ownerData.name.withLast}
                 />
               </Col>

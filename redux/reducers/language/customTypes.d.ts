@@ -21,6 +21,9 @@ export interface Stack {
   arch: DevSkill;
 }
 
+// --- *Note: Should be same keys declared on Stack interface
+export type StackKeys = 'front' | 'back' | 'arch';
+
 export type JobDetail = {
   date: string;
   company: string;
@@ -47,6 +50,7 @@ export interface Labels {
     stack: string;
     experience: string;
     knowledge: string;
+    lang: 'Lenguaje' | 'Language';
   },
   DevSkills: {
     first: string;

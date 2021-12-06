@@ -1,73 +1,40 @@
 // ---Dependencys
-import { ReactElement, useReducer, useRef } from 'react';
+import { ReactElement, useState, useRef } from 'react';
 import { Tabs } from 'antd';
 // ---Redux
 import { useSelector } from 'react-redux';
 import { ReduxState } from 'Reducers';
 // ---Types
-import { Technolgy } from '@Reducers/language/customTypes';
+import { StackKeys } from '@Reducers/language/customTypes';
 // ---Comps
 import FrontalCard from 'Comp/MainCV/DevToolsTable/FrontalCard';
 import ReverseCard from 'Comp/MainCV/DevToolsTable/ReverseCard';
 
 const { TabPane } = Tabs;
-// ------------------------------------------ REDUCER -----------------------------------------
-const typesR = {
-  TOOL_CHANGE: 'TOOL_CHANGE',
-  FLIP: 'FLIP'
-};
 
-const { TOOL_CHANGE, FLIP } = typesR;
-
-interface Action {
-  type: string;
-  payload?: unknown;
-}
-
-interface State {
-  devTool: Technolgy;
-  reverse: boolean;
-}
-
-function reducer(state: State, action: Action) {
-  const { type, payload } = action;
-  switch (type) {
-    case TOOL_CHANGE:
-      return {
-        ...state,
-        reverse: true,
-        devTool: payload as Technolgy
-      };
-
-    case FLIP:
-      return {
-        ...state,
-        reverse: !state.reverse
-      };
-
-    default:
-      return state;
-  }
-}
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function DevToolsTable(): ReactElement {
   // ------------------------Const, States and Hooks-------------------------
   const { languageReducer, appInfoReducer } = useSelector((reducers: ReduxState) => reducers);
-  const { labels, data } = languageReducer;
+  const { labels } = languageReducer;
   const { isMovil } = appInfoReducer;
   const { first, second, third } = labels.DevSkills;
-  const { front, back, arch } = data.stack;
   // ---State
+  interface State {
+    devFather: StackKeys;
+    devToolIndex: number;
+    reverse: boolean;
+  }
   const initalState: State = {
-    devTool: data.stack.front.devTools[1],
+    devFather: 'front',
+    devToolIndex: 0,
     reverse: false
   };
-  const [state, dispatch] = useReducer(reducer, initalState);
+  const [state, changeState] = useState(initalState);
   const revreseCardRef = useRef<null | HTMLElement>(null);
   // ------------------------Main Method-------------------------
-  function onToolChange(tools: Array<Technolgy>, index: number) {
-    const devTool = tools[index];
-    dispatch({ type: TOOL_CHANGE, payload: devTool });
+  function onToolChange(devFather: StackKeys, devToolIndex: number) {
+    changeState({ ...state, devFather, devToolIndex });
     if (isMovil) {
       scrollToReverse();
     }
@@ -85,23 +52,35 @@ export default function DevToolsTable(): ReactElement {
         <TabPane tab={first} key={first}>
           <FrontalCard
             onToolChange={onToolChange}
-            devSkill={front}
+            devFather="front"
           />
-          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
+          <ReverseCard
+            revreseCardRef={revreseCardRef}
+            devFather={state.devFather}
+            devToolIndex={state.devToolIndex}
+          />
         </TabPane>
         <TabPane tab={second} key={second}>
           <FrontalCard
+            devFather="back"
             onToolChange={onToolChange}
-            devSkill={back}
           />
-          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
+          <ReverseCard
+            revreseCardRef={revreseCardRef}
+            devFather={state.devFather}
+            devToolIndex={state.devToolIndex}
+          />
         </TabPane>
         <TabPane tab={third} key={third}>
           <FrontalCard
+            devFather="arch"
             onToolChange={onToolChange}
-            devSkill={arch}
           />
-          <ReverseCard revreseCardRef={revreseCardRef} devTool={state.devTool} />
+          <ReverseCard
+            revreseCardRef={revreseCardRef}
+            devFather={state.devFather}
+            devToolIndex={state.devToolIndex}
+          />
         </TabPane>
       </Tabs>
     </div>

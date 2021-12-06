@@ -1,13 +1,20 @@
 // ---Dependencys
 import React, { useState, ReactElement } from 'react';
-import { MenuFoldOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
+import {
+  HomeOutlined, MenuFoldOutlined, MenuOutlined, UserOutlined
+} from '@ant-design/icons';
 import Link from 'CComps/Link';
 import { Row, Col } from 'antd';
 // ---Redux
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { ReduxState } from 'Reducers';
+import {
+  toSpanish,
+  toEnglish
+} from 'Actions/language';
 // ---Components
 import NavButton from 'Comp/NavBar/NavbarItems/NavButton';
+import NavDropdown, { DropDownPath } from 'Comp/NavBar/NavbarItems/NavDropdown';
 // ---Others
 import { general } from 'Others/globalData';
 
@@ -32,6 +39,21 @@ function JustButtons(props: { currentPath: string }) {
   };
   // ---Redux States
   const { labels } = useSelector((reducers: ReduxState) => reducers.languageReducer);
+  // ---Redux Actions
+  const dispatch = useDispatch();
+  // ---DropDown Menus
+  const langMenu: Array<DropDownPath> = [
+    {
+      label: 'English',
+      value: '/',
+      handleClick: () => dispatch(toEnglish())
+    },
+    {
+      label: 'Español',
+      value: '/',
+      handleClick: () => dispatch(toSpanish())
+    }
+  ];
   return (
     <Row>
       <NavButton path={`/MainCVPage#${general.sectionIds.stack}`} currentPath={currentPath} grid={navGrid}>
@@ -49,6 +71,12 @@ function JustButtons(props: { currentPath: string }) {
           {labels.menu.contact}
         </>
       </NavButton>
+      <NavDropdown
+        paths={langMenu}
+        label={labels.menu.lang}
+        currentPath={currentPath}
+        grid={navGrid}
+      />
     </Row>
   );
 }
@@ -79,19 +107,18 @@ function MovilMenu(props: OtherProps) {
 // ------------------------------------------ TYPES-----------------------------------------
 interface Props {
   isMovil: boolean;
-  logo: string;
   currentPath: string;
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function Navbar(props: Props): ReactElement {
-  const { isMovil, logo, currentPath } = props;
+  const { isMovil, currentPath } = props;
   const [menuVisible, setMenuVisible] = useState(false);
   return (
-    <Row className="nav-div">
+    <Row id="nav" className="nav-div">
       <Col xs={24} sm={24} md={4} lg={4} xl={6} xxl={6}>
         <Link to="/">
           <div className="to-home">
-            <img src={logo} alt="SB" width="100%" />
+            <HomeOutlined />
           </div>
         </Link>
       </Col>

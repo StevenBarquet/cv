@@ -8,8 +8,9 @@ import Introduction from 'Comp/MainCV/Introduction';
 import TechGraphs from 'Comp/MainCV/TechGraphs';
 import DevToolsTable from 'Comp/MainCV/DevToolsTable';
 import WorkTiemeLine from 'Comp/MainCV/WorkTiemeLine';
+import Extras from 'Comp/MainCV/Extras';
 // ---CommonComps
-import LangButton from 'CComps/LangButton';
+import BackTop from 'CComps/BackTop';
 // ---Containers
 import NavbarCont from 'Cont/NavbarCont';
 import Footer from 'Cont/Footer';
@@ -27,16 +28,16 @@ export default function MainCV(): ReactElement {
   }
   return (
     <>
+      <BackTop />
       <div id="top" className={getClassname()}>
         <NavbarCont />
         <Introduction />
         <TechGraphs />
         <DevToolsTable />
         <WorkTiemeLine />
+        <Extras />
         <Footer />
       </div>
-      <LangButton />
     </>
-
   );
 }

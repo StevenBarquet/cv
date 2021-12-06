@@ -1,21 +1,21 @@
 // ---Dependencys
 import { ReactElement } from 'react';
 import { Row, Col } from 'antd';
+// ---Redux
+import { useSelector } from 'react-redux';
+import { ReduxState } from 'Reducers';
 // ---Types
-import { Technolgy } from '@Reducers/language/customTypes';
+import { StackKeys } from '@Reducers/language/customTypes';
 
 // ------------------------------------------ PROPS-----------------------------------------
 interface Props {
-  devTools: Array<Technolgy>;
-  // onFlip: ()=>void;
-  onToolChange: (tools: Array<Technolgy>, index: number)=>void;
+  onToolChange: (devFather: StackKeys, devToolIndex: number)=>void;
+  devFather: StackKeys;
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function ToolsList(props: Props) : ReactElement {
-  const { devTools, onToolChange } = props;
-  function onClick(i: number) {
-    onToolChange(devTools, i);
-  }
+  // ------------------------Const, States and Hooks-------------------------
+  const { onToolChange, devFather } = props;
   const grid = {
     xs: 8,
     sm: 8,
@@ -24,6 +24,13 @@ export default function ToolsList(props: Props) : ReactElement {
     xl: 4,
     xxl: 3
   };
+  // ---Redux States
+  const { languageReducer } = useSelector((reducers: ReduxState) => reducers);
+  const { devTools } = languageReducer.data.stack[devFather];
+  // ------------------------------ Main Methods -----------------------------
+  function onClick(i: number) {
+    onToolChange(devFather, i);
+  }
   return (
     <Row>
       {

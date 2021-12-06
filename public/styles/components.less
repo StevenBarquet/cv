@@ -143,19 +143,27 @@
   100% { background-position: 0 0; }
 }
 //-----------------------------------------------BACKTOP---------------------------------------------
-.back-top-button{
-  background-color: #646464b7;
-  position: fixed;
-  bottom: 20px;
-  right: 25px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  svg{
-    color: #fff;
-    font-size: 20px;
+.back-top{
+  &-top{
+    width: 0px;
+    height: 0px;
+    float: left;
   }
-  &:hover{
-    background-color: #272727b7;
+  &-button{
+    background-color: #646464b7;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    svg{
+      color: #fff;
+      font-size: 20px;
+    }
+    &:hover{
+      background-color: #272727b7;
   }
+  }
+  
 }

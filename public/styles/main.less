@@ -13,8 +13,9 @@
   color: @colorNavLogo;
   font-size: 30px;
   cursor: pointer;
-  span {
-    font-size: 14px;
+  svg {
+    font-size: 40px;
+    
   }
 }
 .nav-btn {
@@ -259,6 +260,9 @@ footer{
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: 98% 640px;
     .description{
+      img{
+        border-radius: 50%;
+      }
       margin-top: 110px;
     }
   }
@@ -403,6 +407,7 @@ footer{
 /*-----------------------------------WORK TIMELINE--------------------------------*/
 .work-time{
   padding-top: 15px;
+  padding-bottom: 15px;
   background-color: @color2;
   background-color: @backgroundFallBack1;
   background: @backgroundImage1 repeat center center fixed;
@@ -417,30 +422,50 @@ footer{
     font-weight: bold;
     padding: 25px 0px 10px 0px;
   }
-  .ant-timeline-item-content{
-    button{
-      padding: 7px;
-      border-radius: 5px;
-      &:hover{
-        background-color: #27265c4d;
-      }
-    }
+  .work-item{
+    width: 290px;
     h3{
       color: @colorPrimary;
-      text-align: start;
     }
     h4{
       color: @colorPrimaryText;
-      text-align: start;
     }
     .time{
       font-weight: bold;
     }
-  }
-  .ant-timeline-item-tail {
-    border-left: 2px solid #b397b4;
+    h5{
+      color: @colorPrimary;
+      font-weight: bold;
+    }
   }
 }
 .custom-ant-title {    
   color: @colorPrimary;
+}
+.extras-container{
+  padding-top: 15px;
+  background-color: @color2;
+  background-color: @backgroundFallBack1;
+  background: @backgroundImage1 repeat center center fixed;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  color: @colorPrimaryText;
+  h1{
+    text-align: center;
+    color: @colorPrimary;
+    font-weight: bold;
+    padding: 25px 0px 10px 0px;
+  }
+  h2{
+    color: @colorPrimaryText;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+  }
+  img{
+    width: 35%;
+    display: block;
+    margin: 0px auto 10px auto;
+  }
 }

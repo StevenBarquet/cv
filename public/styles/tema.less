@@ -43,11 +43,23 @@ button, input[type="submit"], input[type="reset"] {
       line-break: 10px;
     }
   }
+  ::-moz-selection { /* Code for Firefox */
+    color: @colorPrimary;
+    background: #1ef0ed;
+  }
+  
+  ::selection {
+    color: @colorPrimary;
+    background: #1ef0ed;
+  }
   /*-------------------------------------UTILITY STYLES----------------------------------*/
-  .center-block{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .center-from-father{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .center-from-child{
+    margin: 0px auto 0px auto;
   }
   .col-vertical-align{
   display: flex;
