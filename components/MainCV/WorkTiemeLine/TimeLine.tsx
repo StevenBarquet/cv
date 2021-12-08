@@ -21,13 +21,13 @@ function WorkItem(props: WorkItemProps) {
   } = props;
   return (
     <div className="work-item">
+      <img src="/images/profile-pic.jpg" alt="steve" />
       <h3>{company}</h3>
       <h4>{title}</h4>
       <h4 className="time">{time}</h4>
       <h5>{date}</h5>
       <Button onClick={onClicK} type="primary">
         More details
-        {' '}
         <ArrowRightOutlined />
       </Button>
     </div>
