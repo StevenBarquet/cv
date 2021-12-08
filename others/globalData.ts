@@ -826,6 +826,7 @@ export const stackSpanish: Stack = {
 // ----------------------------------Work Expirience------------------------------
 const engWorkExp: Array<JobDetail> = [
   {
+    urlImg: '/images/WorkExp/WorkExp1.jpeg',
     date: '2013-Jan - 2014-Jan',
     company: 'IBM',
     title: 'Jr Application Developer Java & Web Technologies',
@@ -833,6 +834,7 @@ const engWorkExp: Array<JobDetail> = [
     description: 'Design, implement and maintain java application phases, take part in software development activities, conduct software analysis, programming, testing and debugging. As jr developer I mainly support and document the operation.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp2.jpeg',
     date: '2014-Jan - 2015-Jan',
     company: 'Freelance',
     title: 'Frontend Developer',
@@ -840,6 +842,7 @@ const engWorkExp: Array<JobDetail> = [
     description: 'Design, implement and maintain web applications in different phases, analysis, design, development, testing and maintenance using most used technologies (html5, Javascript, JQuery ,css3, boostrap, responsive design, ). Connection to Web Services and Apis, proposals for solutions, programming, testing and debugging.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp3.jpeg',
     date: '2015-Jan - 2016-March',
     company: 'PBG',
     title: 'Head of Development',
@@ -847,6 +850,7 @@ const engWorkExp: Array<JobDetail> = [
     description: 'The company did not have a development area before my arrival, the IT products they needed were rented out to external consultants. During my stay, I used my experience in solving the problems that the consultants try to solve such as slow loading of the site, updating their website, promoting good practices in the code, helping all departments to have a more friendly, dynamic and functional IT environment and supervise that the products contracted in IT consultants are what they are supposed to be.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp1.jpeg',
     date: '2016-March - 2019-Jan',
     company: 'Interware',
     title: 'Fullstack Senior Developer',
@@ -854,6 +858,7 @@ const engWorkExp: Array<JobDetail> = [
     description: 'Design and develop diferent web systems using modern technogies like the most updated version of react, redux, node, server side render (ssr), webpack and flow for the development. Also for the quality side I use husky, prettier, checkstyle, eslint and sonarqube to avoid syntax and code structre mistakes and JEST with enzyme for testing part, ensuring the quality and efficiency of the software'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp2.jpeg',
     date: '2019-Jan - Today',
     company: 'Interware',
     title: 'Presale engineer and Tech lead',
@@ -864,6 +869,7 @@ const engWorkExp: Array<JobDetail> = [
 
 const espWorkExp: Array<JobDetail> = [
   {
+    urlImg: '/images/WorkExp/WorkExp1.jpeg',
     date: '2013-Enero',
     company: 'IBM',
     title: 'Desarrollador Jr de aplicaciones Java y Technologias Web',
@@ -871,6 +877,7 @@ const espWorkExp: Array<JobDetail> = [
     description: 'Diseño, implementación y mantenimiento de aplicaciones Java, actividades de desarrollo de software, análisis, programación, pruebas y depuración de software. Como desarrollador jr, principalmente apoyo y documente la operación.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp2.jpeg',
     date: '2014-Enero',
     company: 'Freelance',
     title: 'Desarrollador Frontend',
@@ -878,6 +885,7 @@ const espWorkExp: Array<JobDetail> = [
     description: 'Diseñar, implementar y mantener aplicaciones web en diferentes fases, análisis, diseño, desarrollo, testing y mantenimiento utilizando las tecnologías más utilizadas (html5, Javascript, JQuery, css3, boostrap, responsive design,). Conexión a Web Services y Apis, propuestas de soluciones, programación, testing y depuración.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp3.jpeg',
     date: '2015-Enero',
     company: 'PBG',
     title: 'Jefe de Desarrollo',
@@ -885,6 +893,7 @@ const espWorkExp: Array<JobDetail> = [
     description: 'La empresa no tenía un área de desarrollo antes de mi llegada, los productos de TI que necesitaban se alquilaron a consultores externos. Durante mi estadía, utilicé mi experiencia en la solución de los problemas que los consultores intentan resolver como la carga lenta del sitio, la actualización de su sitio web, la promoción de buenas prácticas en el código, ayudando a todos los departamentos a tener una experiencia más amigable, dinámica y funcional en su ambiente de TI además de supervisar que los productos contratados de TI sean lo esperado.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp1.jpeg',
     date: '2016-Marzo',
     company: 'Interware',
     title: 'Desarrollador Fullstack Senior',
@@ -892,6 +901,7 @@ const espWorkExp: Array<JobDetail> = [
     description: 'Diseñar y desarrollar diferentes sistemas web utilizando tecnologías modernas como la versión más actualizada de react, redux, node, server side render (ssr), webpack y flow para el desarrollo. También por el lado de la calidad utilicé husky, prettier, checkstyle, eslint y sonarqube para evitar errores de sintaxis y estructura en el código y JEST con enzyme para la parte de pruebas, asegurando la calidad y eficiencia del software.'
   },
   {
+    urlImg: '/images/WorkExp/WorkExp2.jpeg',
     date: '2019-Enero',
     company: 'Interware',
     title: 'Ingeniero Preventa y Líder Técnico',

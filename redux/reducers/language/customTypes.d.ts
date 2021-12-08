@@ -25,6 +25,7 @@ export interface Stack {
 export type StackKeys = 'front' | 'back' | 'arch';
 
 export type JobDetail = {
+  urlImg: string;
   date: string;
   company: string;
   title: string;

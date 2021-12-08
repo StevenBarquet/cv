@@ -9,6 +9,7 @@ import { JobDetail } from '@Reducers/language/customTypes';
 
 // ------------------------------------------ AUX COMP
 interface WorkItemProps {
+  urlImg: string;
   company: string;
   title: string;
   time: string;
@@ -17,15 +18,15 @@ interface WorkItemProps {
 }
 function WorkItem(props: WorkItemProps) {
   const {
-    company, title, time, date, onClicK
+    urlImg, company, title, time, date, onClicK
   } = props;
   return (
     <div className="work-item">
-      <img src="/images/profile-pic.jpg" alt="steve" />
+      <img src={urlImg} alt="steve" />
       <h3>{company}</h3>
-      <h4>{title}</h4>
-      <h4 className="time">{time}</h4>
       <h5>{date}</h5>
+      <h4 className="time">{time}</h4>
+      <h4>{title}</h4>
       <Button onClick={onClicK} type="primary">
         More details
         <ArrowRightOutlined />
@@ -85,6 +86,7 @@ export default function TiemeLine(props: Props): ReactElement {
         workExp.map((jobExp) => (
           <div key={jobExp.title}>
             <WorkItem
+              urlImg={jobExp.urlImg}
               time={jobExp.time}
               company={jobExp.company}
               title={jobExp.title}
