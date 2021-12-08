@@ -84,7 +84,7 @@ export default function TiemeLine(props: Props): ReactElement {
     >
       {
         workExp.map((jobExp) => (
-          <div key={jobExp.title}>
+          <div className="carrousel" key={jobExp.title}>
             <WorkItem
               urlImg={jobExp.urlImg}
               time={jobExp.time}
