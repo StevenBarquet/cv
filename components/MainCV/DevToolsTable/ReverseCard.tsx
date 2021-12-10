@@ -12,7 +12,7 @@ import { StackKeys } from '@Reducers/language/customTypes';
 // ---Other
 import { ownerData } from 'Others/global-config';
 
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES -----------------------------------------
 interface Props {
   devFather: StackKeys;
   devToolIndex: number;

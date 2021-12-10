@@ -10,7 +10,7 @@ import { ReduxState } from 'Reducers';
 import ToolsList from 'Comp/MainCV/DevToolsTable/ToolsList';
 import Achivements from 'Comp/MainCV/DevToolsTable/Achivements';
 
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES -----------------------------------------
 interface Props {
   devFather: StackKeys;
   onToolChange: (devFather: StackKeys, devToolIndex: number)=>void;

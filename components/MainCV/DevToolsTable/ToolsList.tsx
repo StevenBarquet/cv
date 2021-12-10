@@ -4,10 +4,9 @@ import { Row, Col } from 'antd';
 // ---Redux
 import { useSelector } from 'react-redux';
 import { ReduxState } from 'Reducers';
-// ---Types
 import { StackKeys } from '@Reducers/language/customTypes';
 
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES -----------------------------------------
 interface Props {
   onToolChange: (devFather: StackKeys, devToolIndex: number)=>void;
   devFather: StackKeys;

@@ -10,6 +10,7 @@ import { StackKeys } from '@Reducers/language/customTypes';
 import FrontalCard from 'Comp/MainCV/DevToolsTable/FrontalCard';
 import ReverseCard from 'Comp/MainCV/DevToolsTable/ReverseCard';
 
+// ---Tabs
 const { TabPane } = Tabs;
 
 // ------------------------------------------ COMPONENT-----------------------------------------

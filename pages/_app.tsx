@@ -9,15 +9,15 @@ import {
   updateParams
 } from 'Actions/appInfo';
 import { ResponsiveData } from '@Redux/reducers/appInfo/customTypes';
+import { wrapper } from '@Redux/store';
 // ---Types
 import { AppProps } from 'next/app';
 // ---Others
 import 'Styles/colors.less';
 import 'Styles/index.less';
 import isMovilDetector from 'Others/isMovilDetector';
-// ---Redux
-import { wrapper } from '@Redux/store';
 
+// ---------------------------Component--------------------------------------------------
 function App({ Component, pageProps }: AppProps): ReactElement {
   const responsiveData = isMovilDetector();
   // ------------------------Const, States and hooks--------------------

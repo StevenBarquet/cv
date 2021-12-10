@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import Link from 'CComps/Link';
 import { Col, ColProps } from 'antd';
 
-// ------------------------------------TYPES---------------------------------------
+// ------------------------------------PROPS TYPES---------------------------------------
 interface Props {
   children?: string | ReactElement | ReactElement[];
   path: string;

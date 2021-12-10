@@ -1,3 +1,4 @@
+// ---Dependencys
 import { SimpleTypes, SimpleTypesObj } from '@Declarations';
 
 // --------Search-------------

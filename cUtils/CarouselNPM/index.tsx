@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import Carousel from 'react-multi-carousel';
 
+// ---------------------------Component--------------------------------------------------
 export default function CarouselNPM(): React.ReactElement {
   const responsive = {
     superLargeDesktop: {

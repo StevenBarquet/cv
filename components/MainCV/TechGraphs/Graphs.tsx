@@ -2,11 +2,7 @@
 /* eslint-disable global-require */
 // ---Dependencys
 import React, { useEffect, ReactElement } from 'react';
-// import { Row, Col } from 'antd';
-// ---Util Comps
-// import ButtonMlg from 'Utils/ButtonMlg';
-// ---Components
-// import AuthValidate from 'Comp/AuthValidate';
+
 // ---Others
 let am4core: any = null;
 let am4charts: any = null;
@@ -34,7 +30,7 @@ export default function Graphs({ gData }: { gData: Array<Data> }): ReactElement 
     nameY: 'Quantity'
   };
   useEffect(() => graphXY(gConfig, gData, null), [gData]);
-  // ----------------------- Metodos Principales
+  // ----------------------- MAIN METHODS
   function graphXY(config: Config, data: Array<Data>, variant: Variant) {
     // Create chart instance
     const chart = am4core.create('someID', am4charts.XYChart);
@@ -48,9 +44,6 @@ export default function Graphs({ gData }: { gData: Array<Data> }): ReactElement 
     categoryAxis.renderer.grid.template.strokeWidth = 1;
     if (variant && variant === 'vertical') {
       categoryAxis.renderer.inversed = true;
-      // categoryAxis.renderer.grid.template.location = 0;
-      // categoryAxis.renderer.cellStartLocation = 0.1;
-      // categoryAxis.renderer.cellEndLocation = 0.9;
     }
     if (config.nameX) {
       categoryAxis.title.text = config.nameY;
@@ -58,9 +51,6 @@ export default function Graphs({ gData }: { gData: Array<Data> }): ReactElement 
 
     const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.min = 0;
-    // if (variant && variant === 'vertical') {
-    //   valueAxis.renderer.opposite = true
-    // }
     if (config.nameY) {
       valueAxis.title.text = config.nameY;
     }
@@ -85,7 +75,7 @@ export default function Graphs({ gData }: { gData: Array<Data> }): ReactElement 
     chart.legend = new am4charts.Legend();
     chart.legend.useDefaultMarker = true;
   }
-  // ----------------------- Metodos Auxiliares
+  // ----------------------- AUX METHODS
   return (
     <div className="container94">
       <div

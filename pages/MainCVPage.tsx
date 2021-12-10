@@ -4,6 +4,7 @@ import Head from 'next/head';
 // ---Containers
 import MainCV from 'Cont/MainCV';
 
+// ---------------------------Component--------------------------------------------------
 export default function HomePage(): ReactElement {
   return (
     <>

@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 import { Modal } from 'antd';
 
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES-----------------------------------------
 interface ExpModalProps {
   isModalVisible: boolean;
   handleOk: () => void;

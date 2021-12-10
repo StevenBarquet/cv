@@ -8,6 +8,7 @@ import {
 } from 'Actions/language';
 import { ReduxState } from 'Reducers';
 
+// ------------------------------------------ COMPONENT-----------------------------------------
 export default function LangButton(): ReactElement {
   // ---Redux States
   const { currentLan } = useSelector((reducers: ReduxState) => reducers.languageReducer);

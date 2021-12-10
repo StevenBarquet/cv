@@ -2,7 +2,7 @@
 import React from 'react';
 import { SettingFilled } from '@ant-design/icons';
 
-// ------------------------------------------ TYPES-----------------------------------------
+// ------------------------------------------ PROPS TYPES-----------------------------------------
 interface Props {
   isLoading: boolean;
 }

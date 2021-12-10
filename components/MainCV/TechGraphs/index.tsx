@@ -9,7 +9,7 @@ import TechCounter from 'Comp/MainCV/TechGraphs/TechCounter';
 import EngLevel from 'Comp/MainCV/TechGraphs/EngLevel';
 import Graphs from 'Comp/MainCV/TechGraphs/Graphs';
 
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES -----------------------------------------
 interface Data {
   area: 'Back' | 'Front' | 'Arch';
   number: number;

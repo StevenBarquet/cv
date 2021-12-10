@@ -34,7 +34,7 @@ function WorkItem(props: WorkItemProps) {
     </div>
   );
 }
-// ------------------------------------------ PROPS-----------------------------------------
+// ------------------------------------------ PROPS TYPES -----------------------------------------
 interface Props {
   workExp: Array<JobDetail>;
   setModalJob: (job: JobDetail)=>void;
