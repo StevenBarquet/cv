@@ -13,9 +13,8 @@
   color: @colorNavLogo;
   font-size: 30px;
   cursor: pointer;
-  svg {
-    font-size: 40px;
-    
+  img {
+    height: 40px;
   }
 }
 .nav-btn {
@@ -69,7 +68,7 @@ footer{
   padding: 15px;
   margin-top: 50px;
   h1{
-    color: #10ccd9;
+    color: @colorFooter;
     font-size: 28px;
     text-align: center;
     line-height: 100%;
@@ -135,25 +134,25 @@ footer{
   }
 }
 .lang-button{
-  background-color: #10ccd960;
+  background-color: @colorlang-button;
   position: fixed;
   top: 100px;
   right: 25px;
   width: 45px;
   height: 40px;
   border-radius: 8px;
-  color: #fff;
+  color: @colorLight;
   font-size: 20px;
   font-weight: bold;
   &:hover{
-    background-color: #272727b7;
+    background-color: @colorBlack;
   }
 }
 //--------------Temp Vars
 @backgroundDesktop: url(/images/desktop-frame.png);
-@color1: #27265c;
-@color2: #fff;
-@color3: rgb(31, 31, 31);
+@color1: @colorBlueDark;
+@color2: @colorLight;
+@color3: @colorBlack;
 /*----------------------------------------HOME-------------------------------------*/
 .home-container{
   &-movil, &-desk{
@@ -233,14 +232,14 @@ footer{
       white-space: pre-line;
     }
     .name{
-      background-color: #6e1ccc93;
+      background-color: @colorSecondaryDarkest;
       border-bottom-right-radius: 50%;
       border-top-right-radius: 50%;
       // Content
       display: flex;
       align-items: center;
       span{
-        background-color: #6e1ccc93;
+        background-color: @colorSecondaryDarkest;
         height: 80%;
         width: 80%;
         border-bottom-right-radius: 50%;

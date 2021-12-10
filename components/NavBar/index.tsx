@@ -1,7 +1,7 @@
 // ---Dependencys
 import React, { useState, ReactElement } from 'react';
 import {
-  HomeOutlined, MenuFoldOutlined, MenuOutlined, UserOutlined
+  MenuFoldOutlined, MenuOutlined, UserOutlined
 } from '@ant-design/icons';
 import Link from 'CComps/Link';
 import { Row, Col } from 'antd';
@@ -118,7 +118,7 @@ export default function Navbar(props: Props): ReactElement {
       <Col xs={24} sm={24} md={4} lg={4} xl={6} xxl={6}>
         <Link to="/">
           <div className="to-home">
-            <HomeOutlined />
+            <img src="/images/HomeLogo.webp" alt="Steven" />
           </div>
         </Link>
       </Col>

@@ -15,8 +15,7 @@ export default function WorkTiemeLine(): ReactElement {
       </Col>
       <Col xs={24} sm={24} md={{ span: 10, push: 2 }} lg={{ span: 10, push: 2 }} xl={{ span: 9, push: 3 }} xxl={{ span: 9, push: 3 }}>
         <a href="/downloads/cv.pdf" download>
-          <img src="/images/Extra/pdf.jpeg" alt="Steven" />
-          <h2>PDF</h2>
+          <img src="/images/Extra/pdf.webp" alt="Steven" />
           <button className="glow-on-hover " type="button">
             CV in PDF
             <CaretRightOutlined />
@@ -29,8 +28,7 @@ export default function WorkTiemeLine(): ReactElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/Extra/catgithub.jpeg" alt="Steven" />
-          <h2>GitHub</h2>
+          <img src="/images/Extra/catgithub.webp" alt="Steven" />
           <button className="glow-on-hover " type="button">
             Vist my GitHub
             <CaretRightOutlined />
